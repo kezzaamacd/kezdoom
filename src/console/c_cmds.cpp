@@ -81,7 +81,7 @@ CVAR (Int, cl_blockcheats, 0, 0)
 
 CVARD(Bool, show_messages, true, CVAR_ARCHIVE | CVAR_GLOBALCONFIG, "enable/disable showing messages")
 CVAR(Bool, show_obituaries, true, CVAR_ARCHIVE)
-
+ 
 
 bool CheckCheatmode (bool printmsg, bool sponly)
 {
@@ -1394,4 +1394,7 @@ CCMD (mapinfo)
 	else
 		Printf("Level redirection is currently not being tested - not in game!\n");
 }
-
+CCMD(helloworld)
+{
+	Printf("Hello, world!\n");
+}
