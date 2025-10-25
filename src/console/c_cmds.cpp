@@ -1396,5 +1396,5 @@ CCMD (mapinfo)
 }
 CCMD(helloworld)
 {
-	Printf("Hello, world!\n");
+	Printf("Hello, doom!\n");
 }
