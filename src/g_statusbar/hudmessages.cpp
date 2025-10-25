@@ -909,4 +909,14 @@ void C_MidPrint(FFont* font, const char* msg, bool bold)
 		StatusBar->DetachMessage(MAKE_ID('C', 'N', 'T', 'R'));
 	}
 }
+// Create a message that stays 4 seconds at center (virtual coords)
+static void CreateHelloHUDMessage()
+{
+	if (StatusBar == nullptr) return;
 
+	FFont *font = SmallFont;
+	const char *text = "Hello, HUD Message World!";
+	DHUDMessage *msg = Create<DHUDMessage>(font, text, 0.5f, 0.5f, 0, 0, CR_GOLD, 4.0f);
+	uint32_t id = MAKE_ID('H','U','D','1');
+	StatusBar->AttachMessage(msg, id);
+}

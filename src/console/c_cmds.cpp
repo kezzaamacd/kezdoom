@@ -71,7 +71,7 @@
 #include "v_draw.h"
 #include "d_main.h"
 #include "savegamemanager.h"
-
+#include "sbar.h"
 extern FILE *Logfile;
 extern bool insave;
 
@@ -1394,7 +1394,16 @@ CCMD (mapinfo)
 	else
 		Printf("Level redirection is currently not being tested - not in game!\n");
 }
+static void CreateHelloHUDMessage()
+{
+    // Use the midprint helper to create a centered HUD message.
+    // If you want more control, create a DHUDMessage and attach it to StatusBar.
+    C_MidPrint(SmallFont, "Hello, doom!", false);
+}
+
+
 CCMD(helloworld)
 {
+	CreateHelloHUDMessage();
 	Printf("Hello, doom!\n");
 }
