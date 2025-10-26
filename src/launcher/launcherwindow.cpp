@@ -12,6 +12,9 @@
 #include <zwidget/core/resourcedata.h>
 #include <zwidget/window/window.h>
 #include <zwidget/widgets/tabwidget/tabwidget.h>
+#include "launcherwindow.h"
+#include "i_video.h"
+
 
 bool LauncherWindow::ExecModal(FStartupSelectionInfo& info)
 {
@@ -39,7 +42,7 @@ LauncherWindow::LauncherWindow(FStartupSelectionInfo& info) : Widget(nullptr, Wi
 	PlayGame = new PlayGamePage(this, info);
 	Settings = new SettingsPage(this, info);
 	Network = new NetworkPage(this, info);
-
+	
 	Pages->AddTab(PlayGame, "Play");
 	Pages->AddTab(Settings, "Settings");
 	Pages->AddTab(Network, "Multiplayer");
@@ -50,6 +53,7 @@ LauncherWindow::LauncherWindow(FStartupSelectionInfo& info) : Widget(nullptr, Wi
 
 	Pages->SetCurrentWidget(PlayGame);
 	PlayGame->SetFocus();
+	SetWindowTitle("KezDoom Launcher");
 }
 
 void LauncherWindow::UpdatePlayButton()
