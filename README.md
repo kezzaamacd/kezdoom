@@ -22,4 +22,4 @@ Special thanks to Coraline of the EDGE team for allowing us to use her [README.m
 - https://zdoom.org/wiki/ - Wiki
 - https://dsc.gg/zdoom - Discord Server
 - https://docs.google.com/spreadsheets/d/1pvwXEgytkor9SClCiDn4j5AH7FedyXS-ocCbsuQIXDU/edit?usp=sharing - Translation sheet (Google Docs)
-- https://kezzaamacd.github.io/ - Personal website/Kezdoom documetation coming soon
+- https://kezzaamacd.github.io/Kezdoom.html - Personal website/Kezdoom documetation coming soon
