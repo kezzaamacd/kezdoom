@@ -361,7 +361,6 @@ OptionMenu "OptionsMenu" protected
 	Submenu "$OPTMNU_DISPLAY",			"VideoOptions"
 	Submenu "$OPTMNU_SOUND",			"SoundOptions"
 	Submenu "$OPTMNU_MULTIPLAYER",		"MultiplayerMenu"
-	//Submenu "$OPTMNU_ACCESSIBILITY",	"AccessibilityOptions" // not really usable yet.
 	Submenu "$OPTMNU_MISCELLANEOUS",	"MiscOptions"
 	Submenu "$OPTMNU_SYSTEM",			"SystemMenu"
 	StaticText " "
@@ -971,32 +970,6 @@ OptionMenu "HapticsOptions" protected
 	Option		"$HAPMNU_OPT_WORLD",		"haptics_do_world",		"OnOff"
 }
 
- /*=======================================
- *
- * Accessibility Menu
- *
- *=======================================*/
- 
- OptionMenu AccessibilityOptions protected
- {
-	Title "$ACCMNU_TITLE"
-	
-	StaticText "$ACCMNU_TOOLTIP"
-	Slider "$ACCMNU_TOOLTIP_LINES", "m_tooltip_lines", 0, 4, 1, 0
-	Tooltip "$ACCMNU_TOOLTIP_EXAMPLE"
-	Slider "$ACCMNU_TOOLTIP_SPEED", "m_tooltip_speed", 1.0, 5.0, 1.0, 0
-	Tooltip "$ACCMNU_TOOLTIP_EXAMPLE"
-	Slider "$ACCMNU_TOOLTIP_DELAY", "m_tooltip_delay", 3.0, 15.0, 1.0, 0
-	Tooltip "$ACCMNU_TOOLTIP_EXAMPLE"
-	Slider "$ACCMNU_TOOLTIP_ALPHA", "m_tooltip_alpha", 0.2, 0.9, 0.05, 2
-	Tooltip "$ACCMNU_TOOLTIP_EXAMPLE"
-	Option "$ACCMNU_TOOLTIP_CAP", "m_tooltip_capwidth", "OnOff"
-	Tooltip "$ACCMNU_TOOLTIP_EXAMPLE"
-	Option "$ACCMNU_TOOLIP_SCALE", "m_tooltip_small", "OffOn"
-	Tooltip "$ACCMNU_TOOLTIP_EXAMPLE"
- }
-
-
 //-------------------------------------------------------------------------------------------
 //
 // Video Menu
@@ -1195,12 +1168,11 @@ OptionMenu "LightOptions" protected
 	Option "$GLLIGHTMNU_LIGHTSENABLED",			gl_lights,						"OnOff"
 	Option "$GLLIGHTMNU_LIGHTSPRITES",			gl_light_sprites,				"YesNo"
 	Option "$GLLIGHTMNU_LIGHTPARTICLES",		gl_light_particles,				"YesNo"
-	Option "$GLLIGHTMNU_SPRITELIGHT",			gl_spritelight,					"SpriteLightModes"
 	//Option "$GLPREFMNU_CORONAS",				gl_coronas,						"OnOff"
 	StaticText " "
 	Option "$GLLIGHTMNU_LIGHTSHADOWMAP",		gl_light_shadowmap,		"YesNo"
 	Option "$GLLIGHTMNU_LIGHTSHADOWMAPQUALITY", gl_shadowmap_quality,	"ShadowMapQuality"
-	Option "$GLLIGHTMNU_LIGHTSHADOWMAPFILTER", 	gl_shadowmap_filter,	"ShadowMapFilter"
+	Option "$GLLIGHTMNU_LIGHTSHADOWMAPFILTER", 	gl_shadowmap_filter,	"ShadowFilter"
 	StaticText " "
 	Option "$GLPREFMNU_SWLMBANDED",				gl_bandedswlight,				"OnOff"
 	Option "$GLPREFMNU_FOGFORCEFULLBRIGHT",		gl_brightfog,					"YesNo"
@@ -2809,14 +2781,6 @@ OptionValue "LightingModes"
 	0, "$OPTVAL_CLASSIC"
 	1, "$OPTVAL_SOFTWARE"
 	2, "$OPTVAL_VANILLA"
-}
-
-OptionValue "SpriteLightModes"
-{
-	-1, "$OPTVAL_AUTO"
-	0, "$OPTVAL_CPUSPRITELIGHT"
-	1, "$OPTVAL_GPUVERTEXSPRITELIGHT"
-	2, "$OPTVAL_GPUPERPIXELSPRITELIGHT"
 }
 
 OptionValue "Precision"
